@@ -1,0 +1,277 @@
+73.2s 1 BirdClassificationModel(
+73.2s 2 (features): Sequential(
+73.2s 3 (0): Conv2d(3, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+73.2s 4 (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+73.2s 5 (2): ReLU(inplace=True)
+73.2s 6 (3): SEBlock(
+73.2s 7 (fc1): Linear(in_features=128, out_features=8, bias=False)
+73.2s 8 (fc2): Linear(in_features=8, out_features=128, bias=False)
+73.2s 9 )
+73.2s 10 (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+73.2s 11 (5): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=128)
+73.2s 12 (6): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+73.2s 13 (7): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+73.2s 14 (8): ReLU(inplace=True)
+73.2s 15 (9): SEBlock(
+73.2s 16 (fc1): Linear(in_features=256, out_features=16, bias=False)
+73.2s 17 (fc2): Linear(in_features=16, out_features=256, bias=False)
+73.2s 18 )
+73.2s 19 (10): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+73.2s 20 (11): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=256)
+73.2s 21 (12): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+73.2s 22 (13): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+73.2s 23 (14): ReLU(inplace=True)
+73.2s 24 (15): SEBlock(
+73.2s 25 (fc1): Linear(in_features=256, out_features=16, bias=False)
+73.2s 26 (fc2): Linear(in_features=16, out_features=256, bias=False)
+73.2s 27 )
+73.2s 28 (16): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+73.2s 29 (17): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=256)
+73.2s 30 (18): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1))
+73.2s 31 (19): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+73.2s 32 (20): ReLU(inplace=True)
+73.2s 33 (21): SEBlock(
+73.2s 34 (fc1): Linear(in_features=512, out_features=32, bias=False)
+73.2s 35 (fc2): Linear(in_features=32, out_features=512, bias=False)
+73.2s 36 )
+73.2s 37 (22): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+73.2s 38 (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=512)
+73.2s 39 (24): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1))
+73.2s 40 (25): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+73.2s 41 (26): ReLU(inplace=True)
+73.2s 42 (27): SEBlock(
+73.2s 43 (fc1): Linear(in_features=512, out_features=32, bias=False)
+73.2s 44 (fc2): Linear(in_features=32, out_features=512, bias=False)
+73.2s 45 )
+73.2s 46 (28): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+73.2s 47 )
+73.2s 48 (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+73.2s 49 (classifier): Sequential(
+73.2s 50 (0): Dropout(p=0.3, inplace=False)
+73.2s 51 (1): Linear(in_features=512, out_features=512, bias=True)
+73.2s 52 (2): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+73.2s 53 (3): ReLU(inplace=True)
+73.2s 54 (4): Dropout(p=0.3, inplace=False)
+73.2s 55 (5): Linear(in_features=512, out_features=1024, bias=True)
+73.2s 56 (6): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+73.2s 57 (7): ReLU(inplace=True)
+73.2s 58 (8): Linear(in_features=1024, out_features=25, bias=True)
+73.2s 59 )
+73.2s 60 )
+73.2s 61 The model has 1,579,801 trainable parameters
+73.3s 62 Epoch 0/39
+73.3s 63 ----------
+337.4s 64 train Loss: 2.1531 Acc: 0.3562
+365.4s 65 val Loss: 1.5953 Acc: 0.5181
+365.4s 66 
+365.4s 67 Epoch 1/39
+365.4s 68 ----------
+627.0s 69 train Loss: 1.2920 Acc: 0.6065
+647.5s 70 val Loss: 1.1315 Acc: 0.6528
+647.5s 71 
+647.5s 72 Epoch 2/39
+647.5s 73 ----------
+909.2s 74 train Loss: 0.9819 Acc: 0.7020
+929.6s 75 val Loss: 0.7239 Acc: 0.7714
+929.6s 76 
+929.6s 77 Epoch 3/39
+929.6s 78 ----------
+1191.1s 79 train Loss: 0.8127 Acc: 0.7526
+1211.7s 80 val Loss: 0.7387 Acc: 0.7748
+1211.7s 81 
+1211.7s 82 Epoch 4/39
+1211.7s 83 ----------
+1473.5s 84 train Loss: 0.7076 Acc: 0.7828
+1493.6s 85 val Loss: 0.5247 Acc: 0.8406
+1493.6s 86 
+1493.6s 87 Epoch 5/39
+1493.6s 88 ----------
+1755.4s 89 train Loss: 0.6270 Acc: 0.8086
+1775.5s 90 val Loss: 0.6243 Acc: 0.8137
+1775.5s 91 
+1775.5s 92 Epoch 6/39
+1775.5s 93 ----------
+2037.0s 94 train Loss: 0.5820 Acc: 0.8217
+2057.0s 95 val Loss: 0.5075 Acc: 0.8473
+2057.0s 96 
+2057.0s 97 Epoch 7/39
+2057.0s 98 ----------
+2318.7s 99 train Loss: 0.5321 Acc: 0.8343
+2339.2s 100 val Loss: 0.4070 Acc: 0.8714
+2339.2s 101 
+2339.2s 102 Epoch 8/39
+2339.2s 103 ----------
+2601.0s 104 train Loss: 0.4741 Acc: 0.8538
+2621.1s 105 val Loss: 0.4171 Acc: 0.8710
+2621.1s 106 
+2621.1s 107 Epoch 9/39
+2621.1s 108 ----------
+2882.7s 109 train Loss: 0.4498 Acc: 0.8610
+2903.4s 110 val Loss: 0.3500 Acc: 0.8965
+2903.4s 111 
+2903.4s 112 Epoch 10/39
+2903.4s 113 ----------
+3164.9s 114 train Loss: 0.4135 Acc: 0.8708
+3185.5s 115 val Loss: 0.3925 Acc: 0.8802
+3185.5s 116 
+3185.5s 117 Epoch 11/39
+3185.5s 118 ----------
+3447.1s 119 train Loss: 0.3852 Acc: 0.8783
+3467.4s 120 val Loss: 0.3462 Acc: 0.8982
+3467.4s 121 
+3467.4s 122 Epoch 12/39
+3467.4s 123 ----------
+3729.1s 124 train Loss: 0.3510 Acc: 0.8907
+3749.2s 125 val Loss: 0.2809 Acc: 0.9152
+3749.2s 126 
+3749.2s 127 Epoch 13/39
+3749.2s 128 ----------
+4010.8s 129 train Loss: 0.3443 Acc: 0.8922
+4031.1s 130 val Loss: 0.2877 Acc: 0.9148
+4031.1s 131 
+4031.1s 132 Epoch 14/39
+4031.1s 133 ----------
+4292.6s 134 train Loss: 0.3182 Acc: 0.8998
+4313.0s 135 val Loss: 0.3099 Acc: 0.9048
+4313.0s 136 
+4313.0s 137 Epoch 15/39
+4313.0s 138 ----------
+4574.6s 139 train Loss: 0.3010 Acc: 0.9037
+4594.9s 140 val Loss: 0.2986 Acc: 0.9117
+4594.9s 141 
+4594.9s 142 Epoch 16/39
+4594.9s 143 ----------
+4856.9s 144 train Loss: 0.3016 Acc: 0.9043
+4876.9s 145 val Loss: 0.2604 Acc: 0.9226
+4876.9s 146 
+4876.9s 147 Epoch 17/39
+4876.9s 148 ----------
+5138.3s 149 train Loss: 0.2638 Acc: 0.9159
+5158.5s 150 val Loss: 0.2542 Acc: 0.9225
+5158.5s 151 
+5158.5s 152 Epoch 18/39
+5158.5s 153 ----------
+5420.2s 154 train Loss: 0.2608 Acc: 0.9164
+5440.1s 155 val Loss: 0.2812 Acc: 0.9173
+5440.1s 156 
+5440.1s 157 Epoch 19/39
+5440.1s 158 ----------
+5701.7s 159 train Loss: 0.2393 Acc: 0.9251
+5721.6s 160 val Loss: 0.2503 Acc: 0.9306
+5721.6s 161 
+5721.6s 162 Epoch 20/39
+5721.6s 163 ----------
+5983.3s 164 train Loss: 0.2390 Acc: 0.9238
+6003.8s 165 val Loss: 0.2254 Acc: 0.9349
+6003.8s 166 
+6003.8s 167 Epoch 21/39
+6003.8s 168 ----------
+6265.3s 169 train Loss: 0.2307 Acc: 0.9262
+6285.5s 170 val Loss: 0.2422 Acc: 0.9310
+6285.5s 171 
+6285.5s 172 Epoch 22/39
+6285.5s 173 ----------
+6547.1s 174 train Loss: 0.2215 Acc: 0.9294
+6567.5s 175 val Loss: 0.1996 Acc: 0.9442
+6567.5s 176 
+6567.5s 177 Epoch 23/39
+6567.5s 178 ----------
+6829.2s 179 train Loss: 0.2062 Acc: 0.9337
+6849.8s 180 val Loss: 0.1974 Acc: 0.9436
+6849.8s 181 
+6849.8s 182 Epoch 24/39
+6849.8s 183 ----------
+7111.9s 184 train Loss: 0.2010 Acc: 0.9361
+7132.2s 185 val Loss: 0.2446 Acc: 0.9305
+7132.2s 186 
+7132.2s 187 Epoch 25/39
+7132.2s 188 ----------
+7394.1s 189 train Loss: 0.1957 Acc: 0.9367
+7414.4s 190 val Loss: 0.2258 Acc: 0.9360
+7414.4s 191 
+7414.4s 192 Epoch 26/39
+7414.4s 193 ----------
+7676.1s 194 train Loss: 0.1823 Acc: 0.9412
+7696.7s 195 val Loss: 0.2238 Acc: 0.9365
+7696.7s 196 
+7696.7s 197 Epoch 27/39
+7696.7s 198 ----------
+7958.5s 199 train Loss: 0.1915 Acc: 0.9403
+7978.5s 200 val Loss: 0.1893 Acc: 0.9466
+7978.5s 201 
+7978.5s 202 Epoch 28/39
+7978.5s 203 ----------
+8240.6s 204 train Loss: 0.1702 Acc: 0.9459
+8260.6s 205 val Loss: 0.2010 Acc: 0.9420
+8260.6s 206 
+8260.6s 207 Epoch 29/39
+8260.6s 208 ----------
+8522.2s 209 train Loss: 0.1771 Acc: 0.9437
+8542.1s 210 val Loss: 0.1878 Acc: 0.9468
+8542.1s 211 
+8542.1s 212 Epoch 30/39
+8542.1s 213 ----------
+8803.8s 214 train Loss: 0.1534 Acc: 0.9488
+8824.0s 215 val Loss: 0.1806 Acc: 0.9506
+8824.0s 216 
+8824.0s 217 Epoch 31/39
+8824.0s 218 ----------
+9085.6s 219 train Loss: 0.1534 Acc: 0.9511
+9105.4s 220 val Loss: 0.1791 Acc: 0.9505
+9105.4s 221 
+9105.4s 222 Epoch 32/39
+9105.4s 223 ----------
+9366.9s 224 train Loss: 0.1515 Acc: 0.9510
+9387.0s 225 val Loss: 0.1984 Acc: 0.9480
+9387.0s 226 
+9387.0s 227 Epoch 33/39
+9387.0s 228 ----------
+9648.7s 229 train Loss: 0.1427 Acc: 0.9544
+9669.1s 230 val Loss: 0.1589 Acc: 0.9570
+9669.1s 231 
+9669.1s 232 Epoch 34/39
+9669.1s 233 ----------
+9930.7s 234 train Loss: 0.1564 Acc: 0.9498
+9950.9s 235 val Loss: 0.1587 Acc: 0.9537
+9950.9s 236 
+9950.9s 237 Epoch 35/39
+9950.9s 238 ----------
+10212.6s 239 train Loss: 0.1353 Acc: 0.9557
+10232.7s 240 val Loss: 0.1692 Acc: 0.9548
+10232.7s 241 
+10232.7s 242 Epoch 36/39
+10232.7s 243 ----------
+10494.4s 244 train Loss: 0.1337 Acc: 0.9571
+10514.6s 245 val Loss: 0.1716 Acc: 0.9542
+10514.6s 246 
+10514.6s 247 Epoch 37/39
+10514.6s 248 ----------
+10776.1s 249 train Loss: 0.1291 Acc: 0.9583
+10796.7s 250 val Loss: 0.1838 Acc: 0.9512
+10796.7s 251 
+10796.7s 252 Epoch 38/39
+10796.7s 253 ----------
+11058.3s 254 train Loss: 0.1353 Acc: 0.9566
+11078.7s 255 val Loss: 0.1835 Acc: 0.9520
+11078.7s 256 
+11078.7s 257 Epoch 39/39
+11078.7s 258 ----------
+11340.2s 259 train Loss: 0.1194 Acc: 0.9602
+11360.1s 260 val Loss: 0.1891 Acc: 0.9496
+11360.1s 261 Early stopping at epoch 39 with best validation loss: 0.1587
+
+
+
+11424.0s 347 /opt/conda/lib/python3.10/site-packages/traitlets/traitlets.py:2930: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+11424.0s 348 warn(
+11424.0s 349 [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
+11424.1s 350 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+11424.5s 351 [NbConvertApp] Writing 333400 bytes to __notebook__.ipynb
+11426.0s 352 /opt/conda/lib/python3.10/site-packages/traitlets/traitlets.py:2930: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+11426.0s 353 warn(
+11426.1s 354 [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
+11426.1s 355 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+11427.1s 356 [NbConvertApp] Support files will be in __results___files/
+11427.1s 357 [NbConvertApp] Making directory __results___files
+11427.1s 358 [NbConvertApp] Making directory __results___files
+11427.1s 359 [NbConvertApp] Writing 357357 bytes to __results__.html
